@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { DateFormControl } from '../date-form-control';
 
 @Component({
   selector: 'app-card-form',
@@ -21,7 +21,7 @@ export class CardFormComponent implements OnInit {
       Validators.minLength(16),
       Validators.maxLength(16),
     ]),
-    expiration: new FormControl('', [
+    expiration: new DateFormControl('', [
       Validators.required,
       Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
     ]),
@@ -36,7 +36,7 @@ export class CardFormComponent implements OnInit {
 
   nameFix: FormControl = this.cardForm.controls.name as FormControl
   cardNumberFix: FormControl = this.cardForm.controls.cardNumber as FormControl
-  expirationFix: FormControl = this.cardForm.controls.expiration as FormControl
+  expirationFix: DateFormControl = this.cardForm.controls.expiration as DateFormControl
   securityCodeFix: FormControl = this.cardForm.controls.securityCode as FormControl
 
 
