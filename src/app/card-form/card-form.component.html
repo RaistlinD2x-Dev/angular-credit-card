@@ -7,3 +7,4 @@
 <!--  debugging code for form control  -->
 <div>Form Contents: {{ cardForm.value | json }}</div>
 <div>Form is valid: {{ cardForm.valid }}</div>
+<div>Errors for name: {{ cardForm.controls.name.errors | json }}</div>
