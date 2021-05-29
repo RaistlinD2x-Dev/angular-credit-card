@@ -15,10 +15,16 @@ export class CardFormComponent implements OnInit {
       Validators.minLength(3),
       Validators.maxLength(5),
       // Validators.pattern(/\s/)
-    ])
+    ]),
+    cardNumber: new FormControl(''),
+    expiration: new FormControl(''),
+    securityCode: new FormControl(''),
   });
 
-  formControlFix: FormControl = this.cardForm.controls.name as FormControl
+  nameFix: FormControl = this.cardForm.controls.name as FormControl
+  cardNumberFix: FormControl = this.cardForm.controls.cardNumber as FormControl
+  expirationFix: FormControl = this.cardForm.controls.expiration as FormControl
+  securityCodeFix: FormControl = this.cardForm.controls.securityCode as FormControl
 
 
   constructor() {

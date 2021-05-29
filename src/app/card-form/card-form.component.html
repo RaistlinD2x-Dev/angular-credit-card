@@ -1,5 +1,21 @@
 <form [formGroup]='cardForm'>
-    <app-input label="Name" [control]="formControlFix"></app-input>
+    <app-input 
+        label="Name" 
+        [control]="nameFix"
+    ></app-input>
+    <app-input 
+        label="Card Number" 
+        [control]="cardNumberFix"
+    ></app-input>
+    <app-input 
+        label="Expiration" 
+        [control]="expirationFix"
+    ></app-input>
+    <app-input 
+        label="Security Code" 
+        [control]="securityCodeFix"
+    ></app-input>
+    <button type="submit">Submit</button>
 </form>
 <hr>
 
