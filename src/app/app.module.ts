@@ -8,11 +8,12 @@ import { InputComponent } from './input/input.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     CardFormComponent,
-    InputComponent
+    InputComponent,
   ],
   imports: [
     BrowserModule,
