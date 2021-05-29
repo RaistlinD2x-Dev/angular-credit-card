@@ -7,28 +7,36 @@
         label="Card Number" 
         [control]="cardNumberFix"
     ></app-input>
-    <app-input 
-        label="Expiration (MM/YY)" 
-        [control]="expirationFix"
-    ></app-input>
-    <app-input 
-        label="Security Code" 
-        [control]="securityCodeFix"
-    ></app-input>
-    <button 
-        class="button is-primary" 
-        [disabled]="cardForm.invalid" 
-        type="submit"
-    >
-        Submit
-    </button>
-    <button 
-        class="button is-warning" 
-        type="button"
-        (click)="onResetClick()"
-    >
-        Reset
-    </button>
+    <div class="columns">
+        <div class="column">
+            <app-input 
+                label="Expiration (MM/YY)" 
+                [control]="expirationFix"
+            ></app-input>
+        </div>
+        <div class="column">
+            <app-input 
+                label="Security Code" 
+                [control]="securityCodeFix"
+            ></app-input>
+        </div>
+    </div>
+    <div class="buttons">
+        <button 
+            class="button is-primary" 
+            [disabled]="cardForm.invalid" 
+            type="submit"
+        >
+            Submit
+        </button>
+        <button 
+            class="button is-warning" 
+            type="button"
+            (click)="onResetClick()"
+        >
+            Reset
+        </button>
+    </div>
 </form>
 <hr>
 

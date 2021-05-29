@@ -1,7 +1,3 @@
-label {
-    margin-left: 15px;
-}
-
-input {
-    margin-left: 15px;
+.field {
+    margin-bottom: 0.75rem;
 }
