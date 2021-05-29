@@ -25,7 +25,13 @@ export class CardFormComponent implements OnInit {
       Validators.required,
       Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
     ]),
-    securityCode: new FormControl(''),
+    securityCode: new FormControl('',[
+      Validators.required,
+      Validators.min(100),
+      Validators.max(999),
+      Validators.minLength(3),
+      Validators.maxLength(3),
+    ]),
   });
 
   nameFix: FormControl = this.cardForm.controls.name as FormControl
